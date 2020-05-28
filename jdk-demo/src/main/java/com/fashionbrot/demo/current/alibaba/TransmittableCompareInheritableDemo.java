@@ -10,6 +10,7 @@ import java.util.concurrent.Executors;
  */
 public class TransmittableCompareInheritableDemo {
 
+    //比较demo 来源：https://www.cnblogs.com/sweetchildomine/p/8807059.html
 
     static ExecutorService executorService = Executors.newFixedThreadPool(1);
 
