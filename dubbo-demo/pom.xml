@@ -5,11 +5,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.fashionbrot.demo</groupId>
-  <artifactId>demo</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+  <artifactId>dubbo-demo</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>dubbo-consumer</module>
+  </modules>
 
-  <name>demo</name>
+  <name>dubbo-demo</name>
+  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
@@ -18,22 +22,9 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
-  <modules>
-    <module>jdk-demo</module>
-    <module>mysql-rowLocks-max-qps-demo</module>
-    <module>dubbo-demo</module>
-    <module>dubbo-demo/dubbo-provider</module>
-    <module>dubbo-demo/dubbo-api</module>
-    <module>dubbo-demo/dubbo-consumer</module>
-  </modules>
 
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
+
   </dependencies>
 
   <build>

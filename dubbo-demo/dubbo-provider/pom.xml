@@ -5,12 +5,19 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.fashionbrot.demo</groupId>
-  <artifactId>demo</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+  <artifactId>dubbo-provider</artifactId>
+  <version>1.0-SNAPSHOT</version>
 
-  <name>demo</name>
+  <name>dubbo-provider</name>
+  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.1.6.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,22 +25,44 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
-  <modules>
-    <module>jdk-demo</module>
-    <module>mysql-rowLocks-max-qps-demo</module>
-    <module>dubbo-demo</module>
-    <module>dubbo-demo/dubbo-provider</module>
-    <module>dubbo-demo/dubbo-api</module>
-    <module>dubbo-demo/dubbo-consumer</module>
-  </modules>
+
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.fashionbrot.demo</groupId>
+      <artifactId>dubbo-api</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>dubbo</artifactId>
+      <version>2.6.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.zookeeper</groupId>
+      <artifactId>zookeeper</artifactId>
+      <version>3.4.6</version>
+    </dependency>
+    <dependency>
+      <groupId>com.101tec</groupId>
+      <artifactId>zkclient</artifactId>
+      <version>0.10</version>
+    </dependency>
+
   </dependencies>
 
   <build>
