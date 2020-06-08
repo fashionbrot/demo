@@ -10,12 +10,12 @@ http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         <dubbo:application name="counmser" />
 
         <!-- 用dubbo协议在20880端口暴露服务 -->
-        <dubbo:protocol name="dubbo" port="20881" />
+        <dubbo:protocol name="dubbo" port="20870" />
 
         <!-- 使用zookeeper注册中心暴露服务地址 即zookeeper的所在服务器ip地址和端口号 -->
         <dubbo:registry address="zookeeper://192.168.99.100:2181"/>
 
         <!-- 生成远程服务代理，可以像使用本地bean一样使用demoService -->
-        <dubbo:reference id="demoService" interface="com.fashionbrot.demo.DubboDemoServiceApi"/>
+        <dubbo:reference id="demoService"  interface="com.fashionbrot.demo.DubboDemoServiceApi"/>
 
 </beans>
